@@ -40,26 +40,26 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // Widget _buildSearchCepTextField() {
-  //   return TextField(
-  //     autofocus: true,
-  //     keyboardType: TextInputType.number,
-  //     textInputAction: TextInputAction.done,
-  //     decoration: const InputDecoration(labelText: 'Cep'),
-  //     controller: _searchCepController,
-  //     enabled: _enableField,
-  //   );
-  // }
+  Widget _buildSearchCepTextField() {
+    return TextField(
+      autofocus: true,
+      keyboardType: TextInputType.number,
+      textInputAction: TextInputAction.done,
+      decoration: const InputDecoration(labelText: 'Cep'),
+      controller: _searchCepController,
+      enabled: _enableField,
+    );
+  }
 
-  // Widget _buildSearchCepButton() {
-  //   return Padding(
-  //     padding: const EdgeInsets.only(top: 20.0),
-  //     child: ElevatedButton(
-  //       onPressed: _searchCep,
-  //       child: _loading ? _circularLoading() : const Text('Consultar'),
-  //     ),
-  //   );
-  // }
+  Widget _buildSearchCepButton() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 20.0),
+      child: ElevatedButton(
+        onPressed: _searchCep,
+        child: _loading ? _circularLoading() : const Text('Consultar'),
+      ),
+    );
+  }
 
   void _searching(bool enable) {
     setState(() {
@@ -69,13 +69,13 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  // Widget _circularLoading() {
-  //   return const SizedBox(
-  //     height: 15.0,
-  //     width: 15.0,
-  //     child: CircularProgressIndicator(),
-  //   );
-  // }
+  Widget _circularLoading() {
+    return const SizedBox(
+      height: 15.0,
+      width: 15.0,
+      child: CircularProgressIndicator(),
+    );
+  }
 
   Future _searchCep() async {
     _searching(true);
@@ -92,10 +92,10 @@ class _HomePageState extends State<HomePage> {
     _searching(false);
   }
 
-  // Widget _buildResultForm() {
-  //   return Container(
-  //     padding: const EdgeInsets.only(top: 20.0),
-  //     child: Text(_result),
-  //   );
-  // }
+  Widget _buildResultForm() {
+    return Container(
+      padding: const EdgeInsets.only(top: 20.0),
+      child: Text(_result),
+    );
+  }
 }
